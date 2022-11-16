@@ -11,7 +11,7 @@ RSpec.describe 'Operations new page', type: :system do
   end
 
   it 'should display welcoming message' do
-    expect(page).to have_content('Add Operations')
+    expect(page).to have_content('Add operations')
   end
 
   it 'should display all fields' do

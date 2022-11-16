@@ -18,7 +18,7 @@ RSpec.describe 'Operations', type: :request do
     end
 
     it 'should have boilerplate text content' do
-      expect(response.body).to include("Operations for #{@group.name}")
+      expect(response.body).to include("Transactions for #{@group.name}")
     end
 
     it 'should return http success' do
@@ -36,7 +36,7 @@ RSpec.describe 'Operations', type: :request do
     end
 
     it 'should have boilerplate text content' do
-      expect(response.body).to include('Add Operations')
+      expect(response.body).to include('Add operations')
     end
 
     it 'should return http success' do

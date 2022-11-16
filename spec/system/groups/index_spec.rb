@@ -11,7 +11,7 @@ RSpec.describe 'Groups index page', type: :system do
   end
 
   it 'should display welcoming message' do
-    expect(page).to have_content('All Groups')
+    expect(page).to have_content('All categories')
   end
 
   it 'should display group name' do
@@ -24,7 +24,7 @@ RSpec.describe 'Groups index page', type: :system do
 
   it 'should display all links' do
     find_link @group.name
-    find_link 'Add group'
+    find_link 'Add category'
   end
 
   it 'should redirect to operations index page when clicking group link' do
@@ -33,8 +33,8 @@ RSpec.describe 'Groups index page', type: :system do
     expect(page).to have_current_path(group_operations_path(group_id: @group.id))
   end
 
-  it 'should redirect to new group form when clicking add group link' do
-    click_link 'Add group'
+  it 'should redirect to new group form when clicking Add category link' do
+    click_link 'Add category'
 
     expect(page).to have_current_path(new_group_path)
   end

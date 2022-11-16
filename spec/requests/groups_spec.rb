@@ -16,7 +16,7 @@ RSpec.describe 'Groups', type: :request do
     end
 
     it 'should have boilerplate text content' do
-      expect(response.body).to include('Groups')
+      expect(response.body).to include('categories')
     end
 
     it 'should return http success' do
