@@ -1,5 +1,3 @@
-
-
 AllCops:
   NewCops: enable
   Exclude:
@@ -30,7 +28,7 @@ Metrics/BlockLength:
   IgnoredMethods: ['describe']
   Max: 30
 
-Style/Documentation:
+Documentation:
   Enabled: false
 Style/ClassAndModuleChildren:
   Enabled: false

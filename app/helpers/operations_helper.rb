@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module OperationsHelper
   def find_operations
     if params[:group_id]
