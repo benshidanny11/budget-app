@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class ApplicationController < ActionController::Base
   rescue_from 'CanCan::AccessDenied' do |_exception|
     redirect_to root_path, alert: 'You are not authorized to access that page.'

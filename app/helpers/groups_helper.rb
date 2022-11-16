@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module GroupsHelper
   def group_amount(group)
     total_amount = 0
