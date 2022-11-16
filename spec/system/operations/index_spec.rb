@@ -11,7 +11,7 @@ RSpec.describe 'Operations index page', type: :system do
   end
 
   it 'should display welcoming message' do
-    expect(page).to have_content("Operations for #{@group.name}")
+    expect(page).to have_content("Transactions for #{@group.name}")
   end
 
   it 'should display all money spent from group\'s operations' do
@@ -22,7 +22,7 @@ RSpec.describe 'Operations index page', type: :system do
     find_link 'Add operation'
   end
 
-  it 'should redirect to new operation form when clicking add operation link' do
+  it 'should redirect to new operation form when clicking Add operation link' do
     click_link 'Add operation'
 
     expect(page).to have_current_path(new_operation_path)

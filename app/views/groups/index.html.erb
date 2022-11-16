@@ -1,7 +1,7 @@
 <header class="bg-primary p-2 d-flex justify-content-around align-items-center">
 
     <div>
-      <h1 class="text-center color-white"><i class="bi bi-wallet-fill fs-1"></i>  All Groups </h1>
+      <h1 class="text-center color-white"><i class="bi bi-wallet-fill fs-1"></i>  All categories </h1>
     </div>
     <div>
       <li class="nav-item align-items-center">
@@ -17,17 +17,17 @@
       </div>
     <% else %>
     <% @groups.each do |group| %>
-      <div class="d-flex border border-1 p-4 shadow-sm align-items-center mt-3 me-auto group_card justify-content: space-between">
-        <div>
-          <img src=<%= group.icon %> alt=<%= group.name %> class="img-thumbnail" style="width: 30%">
-        </div>
-        <div class="">
+      <div class="d-flex border border-1 p-4 shadow-sm align-items-center mt-3 me-auto group_card">
+        <div class="d-flex">
+          <img src=<%= group.icon %> alt=<%= group.name %> class="img-thumbnail" style="width: 70px;">
+         <div class="">
           <div>
             <h3 class="link fs-4"><%= link_to group.name, group_operations_path(group_id: group.id) %></h3>
           </div>
           <p>
             <%= group.created_at.strftime("%d %b %Y") %>
           </p>
+        </div>
         </div>
   
         <div class="price">
@@ -37,6 +37,6 @@
     <% end %>
     <% end %>
     <div class="margin">
-      <%= link_to "Add group", new_group_path, class: "fixed-bottom d-flex justify-content-center w-100 m-auto btn-lg p-4 mt-4 btn btn-success" %>
+      <%= link_to "Add category", new_group_path, class: "fixed-bottom d-flex justify-content-center w-100 m-auto btn-lg p-4 mt-4 btn btn-success" %>
     </div>
   </section>
