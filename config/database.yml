@@ -15,4 +15,4 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: budjet-db-prod

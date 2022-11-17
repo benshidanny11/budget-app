@@ -1,0 +1,44 @@
+<header class="color-primary-bg p-2 d-flex justify-content-around align-items-center">
+
+    <div>
+      <h1 class="text-center color-white"><i class="bi bi-wallet-fill fs-1"></i>  All categories </h1>
+    </div>
+    <div>
+      <li class="nav-item align-items-center">
+        <%= link_to "Sign Out", destroy_user_session_path, method: :get, class: 'nav-link btn btn-danger text-white' %>
+      </li>
+    </div>
+  </header>
+  
+  <section class="container mt-3">
+    <% if @groups.empty? %>
+      <div class="padding border">
+        <h3 class="text-center mt-5 color-text">No categories yet.</h3>
+      </div>
+    <% else %>
+    <% @groups.each do |group| %>
+     <%= link_to group_operations_path(group_id: group.id), class: "links" do %>
+      <div class="d-flex border border-1 p-4 shadow-sm align-items-center mt-3 me-auto group_card">
+        <div class="d-flex">
+          <img src=<%= group.icon %> alt=<%= group.name %> class="img-thumbnail" style="width: 70px;">
+          <div class="ml-1">
+          <div>
+            <h3 class="fs-4 color-text"><%= group.name %></h3>
+          </div>
+          <p class="color-text-second">
+            <%= group.created_at.strftime("%d %b %Y") %>
+          </p>
+        </div>
+        </div>
+  
+        <div class="price">
+          <p class="fs-4 fw-bolder text-secondary">$<%= group_amount(group) %></p>
+        </div>      
+      </div>
+      <% end %>
+    <% end %>
+    <% end %>
+    <div class="margin">
+      <%= link_to "Add category", new_group_path, class: "fixed-bottom d-flex justify-content-center w-100 m-auto btn-lg p-4 mt-4 btn btn-success" %>
+    </div>
+  </section>
