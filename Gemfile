@@ -79,6 +79,4 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'pg', '0.18.1', group: :production
-
 gem 'rails_12factor', group: :production
