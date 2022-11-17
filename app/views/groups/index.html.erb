@@ -1,4 +1,4 @@
-<header class="bg-primary p-2 d-flex justify-content-around align-items-center">
+<header class="color-primary-bg p-2 d-flex justify-content-around align-items-center">
 
     <div>
       <h1 class="text-center color-white"><i class="bi bi-wallet-fill fs-1"></i>  All categories </h1>
@@ -13,18 +13,19 @@
   <section class="container mt-3">
     <% if @groups.empty? %>
       <div class="padding border">
-        <h3 class="text-center mt-5">No groups yet.</h3>
+        <h3 class="text-center mt-5 color-text">No categories yet.</h3>
       </div>
     <% else %>
     <% @groups.each do |group| %>
+     <%= link_to group_operations_path(group_id: group.id), class: "links" do %>
       <div class="d-flex border border-1 p-4 shadow-sm align-items-center mt-3 me-auto group_card">
         <div class="d-flex">
           <img src=<%= group.icon %> alt=<%= group.name %> class="img-thumbnail" style="width: 70px;">
-         <div class="">
+          <div class="ml-1">
           <div>
-            <h3 class="link fs-4"><%= link_to group.name, group_operations_path(group_id: group.id) %></h3>
+            <h3 class="fs-4 color-text"><%= group.name %></h3>
           </div>
-          <p>
+          <p class="color-text-second">
             <%= group.created_at.strftime("%d %b %Y") %>
           </p>
         </div>
@@ -34,6 +35,7 @@
           <p class="fs-4 fw-bolder text-secondary">$<%= group_amount(group) %></p>
         </div>      
       </div>
+      <% end %>
     <% end %>
     <% end %>
     <div class="margin">

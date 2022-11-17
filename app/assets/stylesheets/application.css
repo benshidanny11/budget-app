@@ -1,5 +1,15 @@
-.d-flex.border.border-1.p-4.shadow-sm.align-items-center.mt-3.me-auto.group_card {
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+
+body {
+  font-family: 'Proxima Nova', sans-serif;                                             
+}
+
+.group_card {
   justify-content: space-between;
+}
+
+.group_card:hover {
+   background-color: #ececec;
 }
 
 li.nav-item {
@@ -28,4 +38,24 @@ header.headercontainer {
 
 .color-white {
   color: white;
+}
+
+.color-primary-bg {
+  background-color: #3778c2;
+}
+
+.color-text {
+  color: #434b54;
+}
+
+.ml-1 {
+ margin-left: 1rem;
+}
+
+.links {
+  text-decoration: none !important;
+}
+
+.color-text-second {
+  color: #7e7e7f;
 }

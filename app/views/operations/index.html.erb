@@ -1,7 +1,7 @@
-<header class="bg-primary p-2 d-flex justify-content-around align-items-center">
+<header class="color-primary-bg p-2 d-flex justify-content-around align-items-center">
     <div>
       <%= link_to groups_path do %>
-        <i class="bi bi-caret-left-fill m-2 fs-4 rounded p-2 text-dark"></i>
+        <i class="bi bi-caret-left-fill m-2 fs-4 rounded p-2 color-white"></i>
       <% end %>  </div>
     <div>
       <h1 class="text-center fs-2 text-light"> Transactions for <%= @group.name %> </h1>
@@ -20,7 +20,7 @@
   
     <% if @operations.empty? %>
       <div class="mt-5">
-        <h3 class="text-center">No operations yet.</h3>
+        <h3 class="text-center color-text">No transactions yet.</h3>
       </div>
     <% else %>
       <% @operations.each do |operation| %>

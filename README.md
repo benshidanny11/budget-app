@@ -26,6 +26,11 @@ you@your-Pc-name:~$ cd <blog-app>
 #### 5. Run rake db:migrate to create migrations
 
 
+## Live demo
+
+> Pleas visit this [Link](https://mbudgetapp.herokuapp.com/) to access the live app
+
+
 👤 **Daniel Urimubenshi**
 
 - GitHub: [@benshidanny11](https://github.com/bensidanny11)
@@ -41,3 +46,7 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgements
+
+[Gregoire Vella on Behance](https://www.behance.net/gregoirevella) the [author of the original design]
